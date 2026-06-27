@@ -1,0 +1,472 @@
+#port{
+    text-align: center;
+    font-size: 200px;
+    margin-top: -50px;
+    color: brown;
+    font-family: "Pacifico", cursive;
+    
+}
+#header{
+  text-align: center;
+  font-size: 30px;
+  color: #DAA520  ;
+  font-family: "Pacifico", cursive;
+  margin-top: -20px; 
+   
+}
+/* profile ka css coode*/
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0; /* white space remove */
+  background: linear-gradient(135deg, #013220, #025930);
+  overflow: hidden;
+}
+
+/* Image transition */
+.portfolio-img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 50px;
+  opacity: 0;
+  transform: translateX(-50px); /* left se aayega */
+  animation: slideInImg 2s ease forwards;
+}
+
+@keyframes slideInImg {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Text transition */
+.text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(50px); /* right se aayega */
+  animation: slideInText 2s ease forwards;
+  animation-delay: 0.5s; /* thoda delay for staggered effect */
+}
+
+@keyframes slideInText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#para-profile {
+  font-size: 30px;
+  font-family: "Averia Serif Libre", serif;
+  color: white;
+}
+/*profile css code completed*/
+.text-side h2{
+    flex: 1;
+    font-size: 50px;
+    color:white;
+    margin-top:-80px;
+    
+
+}
+
+
+.skill {
+  margin-top: 0;
+  background: linear-gradient(135deg, #013220, #025930);
+  min-height: 100vh;
+  width: 100vw;
+  padding: 40px 20px;
+}
+
+.skill-title {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 50px;
+  text-align: left;
+  margin-left: 40px;   /* heading left se 40px */
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInTitle 1.5s ease forwards;
+}
+
+@keyframes slideInTitle {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Row style */
+.skill-row {
+  display: flex;
+  flex-direction: column; /* ek ke baad ek line */
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Each skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInRow 1.5s ease forwards;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.skill-item img:hover {
+  transform: scale(1.2);
+}
+
+/* Keyframes for row fade-in */
+@keyframes fadeInRow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project {
+
+
+  color: white;
+  font-family: "Averia Serif Libre", serif;
+}
+
+.project-image {
+
+  border-radius: 8px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInImg 1.5s ease forwards;
+}
+
+@keyframes fadeInImg {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.project-content {
+  font-size: 18px;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+.project h2{
+  font-size: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section Background */
+.welcome {
+  background: linear-gradient(135deg, #013220, #025930); /* dark green shades */
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar a {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: #DAA520; /* golden hover */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.hero-text h1 {
+  font-size: 100px;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  opacity: 0;                /* initially hidden */
+  animation: fadeIn 3s ease forwards; /* run animation */
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* thoda neeche se aayega */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* normal position */
+  }
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0; /* white space remove */
+  background: linear-gradient(135deg, #013220, #025930);
+  overflow: hidden;
+}
+
+/* Image transition */
+.portfolio-img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 50px;
+  opacity: 0;
+  transform: translateX(-50px); /* left se aayega */
+  animation: slideInImg 2s ease forwards;
+}
+
+@keyframes slideInImg {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Text transition */
+.text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(50px); /* right se aayega */
+  animation: slideInText 2s ease forwards;
+  animation-delay: 0.5s; /* thoda delay for staggered effect */
+}
+
+@keyframes slideInText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#para-profile {
+  font-size: 30px;
+  font-family: "Averia Serif Libre", serif;
+  color: white;
+}
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Background + layout */
+body {
+  background: linear-gradient(135deg, #013220, #025930);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: flex-start; /* left align */
+  padding-left: 40px; /* left side space */
+  color: white;
+  font-family: "Averia Serif Libre", serif;
+}
+
+/* Heading animation */
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInHeading 1.5s ease forwards;
+}
+
+@keyframes slideInHeading {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Paragraph animation */
+p {
+  font-size: 20px;
+  
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 0.5s; /* thoda delay for staggered effect */
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact details animation */
+h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 1s; /* aur thoda delay for sequence */
+}
+
+/* Links styling */
+a {
+  color: #FFD700; /* golden links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: white;
+}
+.achievements {
+  margin-top: 0;
+  background: linear-gradient(135deg, #013220, #025930);
+  min-height: 100vh;
+  width: 100vw;
+  
+}
+
+.achievements-title {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+ 
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInHeading 1.5s ease forwards;
+}
+
+@keyframes slideInHeading {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.achievement-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.achievement-item {
+  margin-left: 20px;
+  background: transparent;
+  color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  text-align: left;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInBox 1.5s ease forwards;
+}
+
+.achievement-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+@keyframes fadeInBox {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#backBtn {
+  margin: 20px 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: #FFD700; /* golden */
+  color: #013220;      /* dark green text */
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#backBtn:hover {
+  transform: translateY(-3px);
+  background: white;
+  color: #025930;
+}
+
